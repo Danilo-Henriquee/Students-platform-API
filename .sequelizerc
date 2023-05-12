@@ -1,0 +1,18 @@
+const { resolve } = require('path');
+
+module.exports = {
+  // configurações do banco de dados
+  config: resolve(__dirname, 'src', 'config', 'database.js'),
+
+  // caminho dos models
+  'models-path': resolve(__dirname, 'src', 'models'),
+
+  /*
+  aonde vão ser gerados os migrations onde vai estar
+  todo o histórico de alterações feitas no banco de dados
+  como criação de tabelas, campos e etc.
+  */
+  'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+
+  'seeders-path': resolve(__dirname, 'src', 'database', 'seeds'),
+}
